@@ -1,0 +1,50 @@
+.card {
+    margin: 1rem;
+    box-shadow: $shadow;
+    border-radius: 0.5rem;
+
+    .header-card {
+        padding: 1rem;
+        border-bottom: 1px solid lightgray;
+        @include flex(row, space-between, center);
+
+        h1 {
+            font-size: 1.1rem;
+        }
+    }
+
+    .body-card {
+        padding: 1rem;
+        @include flex(column, space-between, flex-start);
+        font-size: 0.8rem;
+
+        p:first-child {
+            font-weight: bold;
+        }
+
+        img {
+            height: 200px;
+            align-self: center;
+        }
+
+        p:last-child {
+            align-self: flex-end;
+
+            span:nth-child(1) {
+                text-decoration: line-through;
+            }
+            span:nth-child(2) {
+                font-size: 1.2rem;
+                margin-left: 0.5rem; 
+                color: $danger-color;
+            }
+        }
+
+    }
+
+    .footer-card {
+        padding: 1rem;
+        @include flex(row, center, center)
+    }
+
+}
